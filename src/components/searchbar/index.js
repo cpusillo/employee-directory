@@ -13,7 +13,7 @@ function SearchBar(){
       aria-describedby="basic-addon2"
     />
     <InputGroup.Append>
-      <Button variant="secondary">Search</Button>
+      <Button variant="success">Search</Button>
     </InputGroup.Append>
   </InputGroup>
   </Container>
