@@ -1,5 +1,5 @@
 # Employee Directory
-A React app using (https://randomuser.me/)[The RandomUser API] to fill in searchable employee records.
+A React app using [The Random User API](https://randomuser.me/) to fill in searchable employee records.
 
 
 ## How to install & Run
