@@ -1,22 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Form,FormControl,Button, InputGroup } from 'react-bootstrap'
-import "./searchbar.css";
+import { Container,FormControl,Button, InputGroup } from 'react-bootstrap'
 
-function SearchBar(){
+function SearchBar(props){
     return(
-        <div classname="searchbar">
+        <div className="searchbar">
             <Container className="searchForm">
-  <InputGroup className="mb-3">
-    <FormControl
-      placeholder="Start typing name here"
-      aria-label="Name"
-      aria-describedby="basic-addon2"
-    />
-    <InputGroup.Append>
-      <Button variant="success">Search</Button>
-    </InputGroup.Append>
-  </InputGroup>
-  </Container>
+            <InputGroup className="mb-3">
+              <FormControl
+                value={props.value}
+                onChange={props.handleInputChange}
+                placeholder="Start typing employee information here"
+                className="inputFull"
+              />
+              <InputGroup.Append>
+                <Button 
+                variant="success"
+                type="submit"
+                onClick={props.handleSearchResults}
+                >Search
+                </Button>
+              </InputGroup.Append>
+            </InputGroup>
+            </Container>
         </div>
     )
 }
