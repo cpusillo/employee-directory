@@ -20,4 +20,4 @@ Run `npm test` to launch the test runner in interactive watch mode.
 
 ## What the app should look like
 
-![Image of Directory](https://github.com/cpusillo/employee-directory/blob/main/public/employee-directory.png)
+![Image of Directory](https://github.com/cpusillo/employee-directory/blob/main/public/screenshot.png)
