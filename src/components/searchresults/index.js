@@ -15,7 +15,7 @@ function SearchResults(props){
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th><button onClick={props.handleSort}>State Office</button></th>
+                            <th><button className="sortBtn" onClick={props.handleSort}>State Office</button></th>
                         </tr>
                     </thead>
                     <tbody>

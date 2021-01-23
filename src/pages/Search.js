@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import API from "../utils/API"
 import SearchBar from "../components/searchbar"
 import SearchResults from "../components/searchresults"
+import NavBar from "../components/navbar"
 
 // Our Search component will handle the passdown of props to our child components.
 class Search extends Component {
