@@ -4,7 +4,7 @@ import Search from "../src/pages/Search"
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
       <Route exact path="/" component={Search} />
       </div>
