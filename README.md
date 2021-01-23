@@ -1,6 +1,8 @@
 # Employee Directory
 A React app using [The Random User API](https://randomuser.me/) to fill in searchable employee records.
 
+To view the app live, [click here!](cpusillo.github.io/employee-directory)
+
 ## How to use this app
 * Start typing an employee's first name into the search bar to narrow your results
 * Click the refresh button to the right of the search bar to start another search
