@@ -10,8 +10,7 @@ class Search extends Component {
     state = {
         search: "",
         users: [],
-        results: [],
-        order: ""
+        results: []
     }
     
     // When the component "mounts" perform an API call and fill in users and results states.
