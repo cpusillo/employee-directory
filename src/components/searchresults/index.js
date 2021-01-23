@@ -15,7 +15,7 @@ function SearchResults(props){
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th>State Office</th>
+                            <th><a href="" onClick={props.sortStates}>State Office</a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,11 +23,14 @@ function SearchResults(props){
                         {props.results.map(result => (
                             <tr key={result}>
                                 <td>
-                                <img src={result.picture.thumbnail} className="userPhoto" alt={result.name.first}/>
+                                <img 
+                                    src={result.picture.thumbnail} 
+                                    className="userPhoto" alt={result.name.first}
+                                />
                                 </td>
-                                <td>{result.name.title}. {result.name.first} {result.name.last}</td>
-                                <td>+1-{result.cell}</td>
+                                <td>{result.name.title}.{result.name.first} {result.name.last}</td>
                                 <td><a href={result.email}>{result.email}</a></td>
+                                <td>+1-{result.cell}</td>
                                 <td>{result.location.state}</td>
                             </tr>
                         ))}
