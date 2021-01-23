@@ -38,6 +38,16 @@ class Search extends Component {
             this.setState({results});
         }
       };
+
+      handleRefresh() {
+          window.location.reload();
+      }
+
+      sortState() {
+          // Get our state values
+          const { search, users, results, sort } = this.state;
+
+      }
  
 
     render(){
@@ -45,6 +55,7 @@ class Search extends Component {
             <div>
             <SearchBar
                  handleInputChange={this.handleInputChange}
+                 handleRefresh={this.handleRefresh}
                 />
             <SearchResults 
             results={this.state.results}
