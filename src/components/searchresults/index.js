@@ -29,7 +29,7 @@ function SearchResults(props){
                                 />
                                 </td>
                                 <td>{result.name.title}.{result.name.first} {result.name.last}</td>
-                                <td><a href={result.email}>{result.email}</a></td>
+                                <td>{result.email}</td>
                                 <td>+1-{result.cell}</td>
                                 <td>{result.location.state}</td>
                             </tr>
