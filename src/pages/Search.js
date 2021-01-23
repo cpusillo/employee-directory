@@ -8,8 +8,10 @@ class Search extends Component {
     state = {
         search: "",
         users: [],
-        results: []
+        results: [],
+        order: ""
     }
+    
     // When the component "mounts" perform an API call and fill in users and results states.
     componentDidMount() {
         API.getUser().then(res => this.setState({
@@ -28,7 +30,7 @@ class Search extends Component {
         const { search, users } = this.state;
         
         // if search is empty do nothing.
-        if (search == "" ){
+        if (search === "" ){
             return;
         }
         // if search is not empty start the filtering.
@@ -39,17 +41,26 @@ class Search extends Component {
         }
       };
 
+      // Refreshes the window so the user can search again
       handleRefresh() {
+          // Simply refreshes the window
           window.location.reload();
       }
 
-      sortState() {
-          // Get our state values
-          const { search, users, results, sort } = this.state;
-
+      // Sorts the states alphabetically
+      handleSort = () => {
+        // pull in our results from state so we can sort
+        const { results } = this.state;
+        // store the results of our sort method in sort variable
+        const sort = results.sort((a,b) => {
+            if (a.location.state > b.location.state) { return 1 } // return 1 for a to b to the right of b (Alphabetical)
+            else { return -1 } // return -1 for a to be to the left of b (Not Alphabetical)
+        })
+        // Push our newly sorted sort variable into our results state
+        this.setState({ results: sort })
       }
- 
 
+    // what we are going to push to the UI.
     render(){
         return(
             <div>
@@ -59,6 +70,7 @@ class Search extends Component {
                 />
             <SearchResults 
             results={this.state.results}
+            handleSort={this.handleSort}
             />
         </div >
         )

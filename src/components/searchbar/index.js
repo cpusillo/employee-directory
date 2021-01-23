@@ -11,7 +11,7 @@ function SearchBar(props){
               {/* FormControl will use props.handleInputChange to filter our results*/}
               <FormControl
                 onChange={props.handleInputChange}
-                placeholder="Start typing employee name here"
+                placeholder="Start typing employee name here, hit refresh button to search again"
                 className="inputFull"
               />
                   <InputGroup.Append>
