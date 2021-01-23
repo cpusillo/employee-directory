@@ -3,6 +3,7 @@ import API from "../utils/API"
 import SearchBar from "../components/searchbar"
 import SearchResults from "../components/searchresults"
 
+// Our Search component will handle the passdown of props to our child components.
 class Search extends Component {
     // build our state values.
     state = {
@@ -64,6 +65,7 @@ class Search extends Component {
     render(){
         return(
             <div>
+            <NavBar />
             <SearchBar
                  handleInputChange={this.handleInputChange}
                  handleRefresh={this.handleRefresh}
