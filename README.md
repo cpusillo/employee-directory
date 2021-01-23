@@ -23,6 +23,6 @@ Run `npm start` to start the application in dev mode.
 Run `npm test` to launch the test runner in interactive watch mode.
 
 
-## What the app should look like
+## Live Demo
 
-![Image of Directory](https://github.com/cpusillo/employee-directory/blob/main/public/screenshot.png)
+![Image of Directory](https://media.giphy.com/media/8YFQ9rL437feWorfiP/giphy.gif)
